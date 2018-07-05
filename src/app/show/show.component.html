@@ -1,0 +1,18 @@
+<div class="col-sm-12 panel">
+	<h2 class="heading">{{showtitle}}</h2>
+	
+	<div class="lead text-justify clearfix">
+		<div class="col-sm-6">
+			<img class="img-responsive" src="{{showimage}}" onerror="this.src='../assets/broken-image.jpg';"/>
+		</div>
+		{{showcontent}}	
+	</div>
+	<br/>
+	<div class="col-sm-12">
+		<agm-map class="map" [latitude]="showlat" [longitude]="showlong">
+		   <agm-marker [latitude]="showlat" [longitude]="showlong"></agm-marker>
+		</agm-map> 
+	</div>
+	
+</div>
+

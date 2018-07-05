@@ -1,0 +1,13 @@
+.list-block{
+	background: #FFFFFF;
+    height: 310px;
+    margin-bottom: 15px;
+	-webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s; 
+}
+.list-block img{
+	max-height: 235px;
+	margin: 0 auto;
+}
+    

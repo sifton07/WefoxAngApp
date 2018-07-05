@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-sm-4" *ngFor="let list of list">	
+		<div class="list-block text-center">
+			<img class="img-responsive" src="{{list.image_url}}" onerror="this.src='../assets/broken-image.jpg';"/>
+			<h4>{{list.title}}</h4>
+			<a class="btn btn-xs btn-primary" routerLink="/show/{{list.id}}"> <span class="glyphicon glyphicon-info-sign"></span> Info </a>
+			<a class="btn btn-xs btn-primary" routerLink="/update/{{list.id}}"> <span class="glyphicon glyphicon-repeat"></span> Edit </a>
+			<a (click)="removeresource(list.id,list.title)" class="btn btn-xs btn-primary btn-outline" data-toggle="modal" data-target="#removemodal"> <span class="glyphicon glyphicon-trash"></span> Remove </a>
+		</div>		
+	</div>
+</div>
+
+<div class="modal fade" id="removemodal" role="dialog" data-backdrop="static" data-keyboard="false">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-body">
+		  <h4 class="text-center"> {{resourcetitle}} </h4>
+		  <p>{{resourcemessage}}</p>
+		</div>
+		<div class="modal-footer">
+			<div *ngIf="!removestatus;else other_content">
+				<button type="button" class="btn btn-primary btn-outline" data-dismiss="modal"> <span class="glyphicon glyphicon-remove-circle"></span> Cancel</button>
+				<a (click)="remove(resourceid)" class="btn btn-primary"> <span class="glyphicon glyphicon-trash"></span> Remove</a>	
+			</div>
+			<ng-template #other_content><a href="/list" class="btn btn-primary"> <span class="glyphicon glyphicon-th-list"></span> Resource List</a></ng-template>		    
+		</div>
+	  </div>      
+	</div>
+</div>
+

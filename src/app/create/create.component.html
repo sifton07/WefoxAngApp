@@ -1,0 +1,49 @@
+<div class="col-sm-12 panel">
+	<h2 class="heading">Create a resource</h2>
+	<div *ngIf="message" class="col-sm-12">	
+		<div class="text-center alert alert-info">{{message}}</div>
+	</div>
+	<div class="col-sm-6">	
+	 <div class="form-group">
+		<label class="control-label">Title<span>*</span></label>
+		<input [(ngModel)]="title" type="text" placeholder="title" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Image<span>*</span></label>
+		<input [(ngModel)]="image" type="text" placeholder="Image" class="form-control">
+	  </div>
+	</div>	
+	<div class="col-sm-12">
+	 <div class="form-group">
+		<label class="control-label">Content<span>*</span></label>
+		<textarea [(ngModel)]="content" rows="3" type="text" placeholder="Content" class="form-control"></textarea>
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Latitude<span>*</span></label>
+		<input readonly [(ngModel)]="latitude" type="text" placeholder="Latitude" value="{{latitude}}" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Longitude<span>*</span></label>
+		<input readonly [(ngModel)]="longitude" type="text" placeholder="Longitude" value="{{longitude}}" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-12">
+	  <div class="form-group">
+		<agm-map (mapClick)="mapmarker($event)" class="map" [latitude]="latitude" [longitude]="longitude">
+		   <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+		</agm-map> 
+	  </div>
+	</div>
+	<div class="col-sm-12">
+	 <div class="form-group text-right">
+		<a class="btn btn-primary btn-outline" routerLink="/list"> <span class="glyphicon glyphicon-remove-circle"></span> Cancel </a>
+		<button class="btn btn-primary" (click)="create()"> <span class="glyphicon glyphicon-ok-circle"></span> Create </button>
+	  </div>
+	</div>	
+</div>

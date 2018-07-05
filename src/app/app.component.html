@@ -1,20 +1,40 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="header text-center">
+	<a routerLink="/list"><img class="logo" src="https://www.wefox.de/wp-content/uploads/sites/3/2018/03/wefox.svg"> </a>
+</header>
 
+<div class="main-container">
+	<div class="col-sm-3">
+		<div class="profile text-center">
+			<div class="hidden-xs clearfix">
+				<br/><br/>
+				<img class="profile-img" src="https://lh3.googleusercontent.com/-hbAtWc5fuNg/AAAAAAAAAAI/AAAAAAAAAAA/AAnnY7oj6epXeVd9tOM7mNofNYqmAZNw6w/s64-c-mo/photo.jpg"/>
+				<br/>
+				<h3> Sifton Pinto </h3>
+				<b>Application Specialist</b>
+				<br/>
+				<small>Dubai, United Arab Emirates</small>
+				<br/>				
+				<div class="col-sm-12"><hr/></div>
+				<br/>
+			</div>
+			
+			<div class="clearfix">
+				<a class="menu-btn" routerLink="/list"> 
+					<span class="glyphicon glyphicon-th-list"></span>
+					LIST 
+				</a>
+				<a class="menu-btn" routerLink="/create"> 
+					<span class="glyphicon glyphicon-edit"></span>
+					CREATE 
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<router-outlet></router-outlet>
+	</div>
+</div>
+
+<footer>
+
+</footer>

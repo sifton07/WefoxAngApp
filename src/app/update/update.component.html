@@ -1,0 +1,49 @@
+<div class="col-sm-12 panel">
+    <h2 class="heading">Update resource - {{title}}</h2>
+	<div *ngIf="message" class="col-sm-12">	
+		<div class="text-center alert alert-info">{{message}}</div>
+	</div>
+	<div class="col-sm-6">	
+	 <div class="form-group">
+		<label class="control-label">Title<span>*</span></label>
+		<input [(ngModel)]="title" value="{{title}}" type="text" placeholder="title" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Image<span>*</span></label>
+		<input [(ngModel)]="image" value="{{image}}"  type="text" placeholder="Image" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-12">
+	 <div class="form-group">
+		<label class="control-label">Content<span>*</span></label>
+		<textarea [(ngModel)]="content" value="{{content}}" rows="3" type="text" placeholder="Content" class="form-control"></textarea>
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Latitude<span>*</span></label>
+		<input readonly [(ngModel)]="latitude" value="{{latitude}}" type="text" placeholder="Latitude" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="form-group">
+		<label class="control-label">Longitude<span>*</span></label>
+		<input readonly [(ngModel)]="longitude" value="{{longitude}}" type="text" placeholder="Longitude" class="form-control">
+	  </div>
+	</div>
+	<div class="col-sm-12">
+	  <div class="form-group">
+		<agm-map (mapClick)="mapmarker($event)" class="map" [latitude]="latitude" [longitude]="longitude">
+		   <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+		</agm-map> 
+	  </div>
+	</div>
+	<div class="col-sm-12">
+	 <div class="form-group text-right">
+		<a class="btn btn-primary btn-outline" routerLink="/list"> <span class="glyphicon glyphicon-remove-circle"></span> Cancel </a>
+		<button (click)="update(showid)" class="btn btn-primary"> <span class="glyphicon glyphicon-ok-circle"></span> Update </button>
+	  </div>
+	</div>	
+</div>

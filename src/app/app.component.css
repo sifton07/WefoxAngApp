@@ -1,0 +1,53 @@
+.main-container {
+	width: 100%;
+    background: #f9f9f9;
+    display: inline-block;
+	padding-top:30px;
+}
+
+.header{
+	height: 80px;
+    background: #FFFFFF;
+    padding: 20px;
+	border-bottom: 1px solid #faaf39;
+}
+
+.header::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 15px solid #faaf39;
+    position: absolute;
+    margin-top: 59px;
+}
+
+.logo{
+	width:180px;
+}
+
+.profile{
+	padding:25px 0px;
+	background: #FFFFFF;
+	margin-bottom: 15px;
+	-webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s; 
+}
+.profile-img {
+	border-radius:50%;	
+}
+
+.menu-btn {
+	display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    background: #f9b138;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+	padding:10px;
+    font-size: 16px;
+	text-decoration: none;
+}

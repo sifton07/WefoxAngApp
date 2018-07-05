@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+.btn-primary {
+	background-image:none;
+	background-color:#f9b138;
+	border-color:#f9b138;
+	border-radius: 0px;
+	color:#FFFFFF;
+}
+
+.btn-primary.btn-outline{
+	background-color:transparent;
+	color:#f9b138;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #e9c68c;
+	border-color:#f9b138;
+}
+
+.modal-content {
+	border: 1px solid #f9b138;
+    border-radius: 0px;
+}
+
+.form-group {
+	margin-bottom:20px;
+}
+
+.form-control {
+	border: 1px solid #f9b138;
+    border-radius: 0px;
+    padding: 20px;
+}
+
+.control-label {
+	font-size: 16px;
+}
+
+.control-label span{
+	color: #ff0000;
+}
+
+.panel{
+	width: 100%;
+	background : #FFFFFF;
+	margin-bottom: 15px;
+	padding: 20px;
+	display: inline-block;
+	-webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s; 
+}
+
+.heading{
+	margin-bottom:20px;
+}
+
+.heading::before{
+	background: #f9b138;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    position: relative;
+    top: -5px;
+    width: 60px;
+}
+
+.map{
+	height:300px;
+}
+
+.alert-info {
+	color: #faaf39;
+    background-color: #f4f4f4;
+    border-color: #f4f4f4;
+    background-image: none;
+    font-size: 18px;
+    border-radius: 0px;
+    padding: 9px;
+    -webkit-box-shadow: 4px 11px 27px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 11px 27px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all ease-in-out 0.4s;
+}
